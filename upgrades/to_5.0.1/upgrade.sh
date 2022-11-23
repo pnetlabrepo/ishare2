@@ -4,7 +4,7 @@
 # Requirement: Having PNETLab v4.2.10 first for being able to upgrade it to v5.0.1
 
 data=$(mysql -uroot -ppnetlab -D pnetlab_db -e "SELECT control_value FROM control WHERE control_value>1;" 2>/dev/null)
-pnetlab_version=( $data )
+pnetlab_version=($data)
 
 if [[ ${pnetlab_version[1]} == "5.0.1" ]]
 then
