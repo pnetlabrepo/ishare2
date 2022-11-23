@@ -1,24 +1,26 @@
 #!/bin/bash
 
-# Script designed to upgrade PNETLab from 4.2.10 version to 5.0.1 version
-# Requirement: Having PNETLab v4.2.10 first for being able to upgrade it to v5.0.1
+# Script designed to upgrade PNETLab from 4.2.10 to 5.0.1 version
+# Requirement: Having PNETLab 4.2.10 installed for being able to upgrade it to 5.0.1
+# This script avoids to make this upgrade process twice
 
 data=$(mysql -uroot -ppnetlab -D pnetlab_db -e "SELECT control_value FROM control WHERE control_value>1;" 2>/dev/null)
-pnetlab_version=($data)
+pnetlab_info=($data)
+pnetlab_version=${pnetlab_info[1]}
 
-if [[ ${pnetlab_version[1]} == "5.0.1" ]]
+if [[ $pnetlab_version == "5.0.1" ]]
 then
     echo "PNETLab already upgraded to v5.0.1"
     exit 0
 fi
 
-if ! [[ ${pnetlab_version[1]} == "4.2.10" ]]
+if ! [[ $pnetlab_version == "4.2.10" ]]
 then
     echo "You need to have the v4.2.10 to upgrade to the v5.0.1"
     exit 0
 fi
 
-echo "Upgrading to 5.0.1"
+echo "Upgrading to v5.0.1"
 wget -O /tmp/5.0.1.zip https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/to_5.0.1/5.0.1.zip > /dev/null 2>&1
 cd /tmp
 rm -rf upgrade
