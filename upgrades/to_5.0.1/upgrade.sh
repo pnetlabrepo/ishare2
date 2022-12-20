@@ -8,14 +8,12 @@ data=$(mysql -uroot -ppnetlab -D pnetlab_db -e "SELECT control_value FROM contro
 pnetlab_info=($data)
 pnetlab_version=${pnetlab_info[1]}
 
-if [[ $pnetlab_version == "5.0.1" ]]
-then
+if [[ $pnetlab_version == "5.0.1" ]] ; then
     echo "PNETLab already upgraded to v5.0.1"
     exit 0
 fi
 
-if ! [[ $pnetlab_version == "4.2.10" ]]
-then
+if ! [[ $pnetlab_version == "4.2.10" ]] ; then
     echo "You need to have the v4.2.10 to upgrade to the v5.0.1"
     exit 0
 fi
