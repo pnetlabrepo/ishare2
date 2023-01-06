@@ -5,7 +5,7 @@ This script allows to upgrade PNETLab from v4.2.10 to v5.0.1
 
 `Only applicable for cases where your PNETLab version is 4.2.10. Otherwise, an error message will be displayed and the script execution will be finished`
 
-`Also, this script detects if you already have v5.0.1 in your system and avoids to upgrade twice`
+`Also, this script detects if you already have PNETLab v5.0.1 in your system and avoids to upgrade twice`
 
 ### Upgrade
 Apply this command using the terminal
