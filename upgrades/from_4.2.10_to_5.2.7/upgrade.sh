@@ -22,7 +22,7 @@ GREEN='\033[32m'
 NO_COLOR='\033[0m'
     
 echo -e "${GREEN}Downloading 5.2.7 zip file...${NO_COLOR}"
-wget -O /root/5.2.7.zip https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/from_4.2.10_to_5.2.7/5.2.7.zip > /dev/null 2>&1
+wget -q --show-progress -O /root/5.2.7.zip https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/from_4.2.10_to_5.2.7/5.2.7.zip
 echo -e "${GREEN}5.2.7 zip file has been downloaded successfully${NO_COLOR}"
 cd /root
 rm -rf upgrade
@@ -34,5 +34,5 @@ echo -e "${GREEN}Upgrading to v5.2.7...${NO_COLOR}"
 echo -e "${GREEN}Upgrade to v5.2.7 has been done successfully${NO_COLOR}"
 rm -rf upgrade
 #rm 5.2.7.zip
-echo -e"${GREEN}PNETLab VM will be rebooted now${NO_COLOR}"
+echo -e "${GREEN}PNETLab VM will be rebooted now${NO_COLOR}"
 reboot
