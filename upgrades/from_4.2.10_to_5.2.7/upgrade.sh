@@ -18,18 +18,21 @@ if ! [[ $pnetlab_version == "4.2.10" ]]; then
     exit 0
 fi
 
-echo "Downloading 5.2.7 zip file..."
+GREEN='\033[32m'
+NO_COLOR='\033[0m'
+    
+echo -e "${GREEN}Downloading 5.2.7 zip file...${NO_COLOR}"
 wget -O /root/5.2.7.zip https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/from_4.2.10_to_5.2.7/5.2.7.zip > /dev/null 2>&1
-echo "5.2.7 zip file has been downloaded successfully"
+echo -e "${GREEN}5.2.7 zip file has been downloaded successfully${NO_COLOR}"
 cd /root
 rm -rf upgrade
 unzip 5.2.7.zip -d ./upgrade > /dev/null 2>&1
 chmod 755 -R upgrade
 find upgrade -type f -print0 | xargs -0 dos2unix > /dev/null 2>&1
-echo "Upgrading to v5.2.7..."
+echo -e "${GREEN}Upgrading to v5.2.7...${NO_COLOR}"
 ./upgrade/upgrade
-echo "Upgrade to v5.2.7 has been done successfully"
+echo -e "${GREEN}Upgrade to v5.2.7 has been done successfully${NO_COLOR}"
 rm -rf upgrade
 #rm 5.2.7.zip
-echo "PNETLab VM will be rebooted now"
+echo -e"${GREEN}PNETLab VM will be rebooted now${NO_COLOR}"
 reboot
