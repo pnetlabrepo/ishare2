@@ -30,6 +30,6 @@ echo "Upgrading to v5.2.7..."
 ./upgrade/upgrade
 echo "Upgrade to v5.2.7 has been done successfully"
 rm -rf upgrade
-rm 5.2.7.zip
+#rm 5.2.7.zip
 echo "PNETLab VM will be rebooted now"
 reboot
