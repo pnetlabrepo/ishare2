@@ -21,4 +21,4 @@ When you execute the command from above, the steps are as follows:
 
 1) A file called [upgrade.sh](https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/from_4.2.10_to_5.2.7/upgrade.sh) will be downloaded from this repository
 2) Execution permissions will be made to this file
-3) This script will be executed in order to make the upgrade by using the same instructions as described in the PNETLab Official website ["How to Upgrade PNETLab? Section 2. PNETLab can not connect to Internet."](https://pnetlab.com/pages/documentation?slug=how-to-upgrade-pnetlab)
+3) This script will be executed in order to make the upgrade
