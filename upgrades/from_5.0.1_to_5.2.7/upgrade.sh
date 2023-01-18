@@ -10,6 +10,7 @@ GREEN='\033[32m'
 NO_COLOR='\033[0m'
 URL_ZIP_FILE=https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/from_5.0.1_to_$NEW_PNETLAB_VERSION/$NEW_PNETLAB_VERSION.zip
 
+# Getting PNETLab version from db
 data=$(mysql -uroot -ppnetlab -D pnetlab_db -e "SELECT control_value FROM control WHERE control_value>1;" 2>/dev/null)
 pnetlab_info=($data)
 pnetlab_version=${pnetlab_info[1]}
