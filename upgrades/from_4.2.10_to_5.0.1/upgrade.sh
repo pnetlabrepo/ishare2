@@ -43,4 +43,3 @@ echo -e "${GREEN}Upgrade to v5.0.1 has been done successfully${NO_COLOR}"
 
 rm -rf upgrade
 rm 5.0.1.zip
-
