@@ -43,5 +43,7 @@ echo -e "${GREEN}Upgrade to v$NEW_PNETLAB_VERSION has been done successfully${NO
 
 rm -rf upgrade
 #rm $NEW_PNETLAB_VERSION.zip
-echo -e "${GREEN}PNETLab VM will be rebooted now...${NO_COLOR}"
+
+echo -e "${GREEN}PNETLab VM will be rebooted right now...${NO_COLOR}"
+echo -e "${GREEN}Try to connect again in about a minute${NO_COLOR}"
 reboot
