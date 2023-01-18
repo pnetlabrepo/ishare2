@@ -26,7 +26,7 @@ fi
 
 echo -e "${GREEN}Downloading 5.0.1.zip file...${NO_COLOR}"
 wget -O /tmp/5.0.1.zip $URL_ZIP_FILE > /dev/null 2>&1
-echo -e "${GREEN} Zip file has been downloaded successfully${NO_COLOR}"
+echo -e "${GREEN}Zip file has been downloaded successfully${NO_COLOR}"
 
 cd /tmp && rm -rf upgrade
 
