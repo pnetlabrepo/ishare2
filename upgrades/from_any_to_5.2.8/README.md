@@ -1,6 +1,8 @@
 ```linux
 This script allows to upgrade PNETLab from almost any version to v5.2.8
 It cannot be used when version is 6.0.x
+
+File 5.2.8.zip will be downloaded from unetlab.cloud
 ```
 ## upgrade.sh
 
