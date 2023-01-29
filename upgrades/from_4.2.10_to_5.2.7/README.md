@@ -1,5 +1,7 @@
 ```linux
 This script allows to upgrade PNETLab from v4.2.10 to v5.2.7
+
+File 5.2.7.zip will be downloaded from unetlab.cloud
 ```
 ## upgrade.sh
 
