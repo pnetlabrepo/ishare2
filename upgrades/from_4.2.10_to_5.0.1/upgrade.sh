@@ -7,7 +7,7 @@
 # CONSTANTS
 GREEN='\033[32m'
 NO_COLOR='\033[0m'
-URL_ZIP_FILE=https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/from_4.2.10_to_5.0.1/5.0.1.zip
+URL_ZIP_FILE=https://unetlab.cloud/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/from_4.2.10_to_5.0.1/5.0.1.zip
 
 # Getting PNETLab version from db
 data=$(mysql -uroot -ppnetlab -D pnetlab_db -e "SELECT control_value FROM control WHERE control_value>1;" 2>/dev/null)
