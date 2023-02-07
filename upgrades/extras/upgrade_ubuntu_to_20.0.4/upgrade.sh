@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Script designed to upgrade PNETLab UBUNTU version to 20.04
-# Requirement: 
+# Script designed to upgrade dependencies in PNETLab UBUNTU 20.04
+# Requirement: You need to have UBUNTU 20.04
 
 # CONSTANTS
 GREEN='\033[32m'
@@ -13,7 +13,7 @@ URL_ZIP_FILE=https://unetlab.cloud/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/e
 
 lsb_release -r -s | grep -q 20.04
 if [ $? -ne 0 ]; then
-    echo -e "${RED}Upgrade has been rejected${NO_COLOR}"
+    echo -e "${RED}Upgrade has been rejected. You need to have UBUNTU 20.04 to use this script${NO_COLOR}"
     exit 0
 fi
 
