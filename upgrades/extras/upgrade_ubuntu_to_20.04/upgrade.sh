@@ -23,6 +23,9 @@ echo -e "${GREEN}$ZIP_FILENAME has been downloaded successfully${NO_COLOR}"
 
 cd /tmp && rm -rf upgrade
 
+apt-get update > /dev/null 2>&1
+apt-get install unzip > /dev/null 2>&1
+
 echo -e "${GREEN}Unzipping zip file...${NO_COLOR}"
 unzip $ZIP_FILENAME -d ./upgrade > /dev/null 2>&1
 echo -e "${GREEN}Zip file has been unzipped successfully...${NO_COLOR}"
