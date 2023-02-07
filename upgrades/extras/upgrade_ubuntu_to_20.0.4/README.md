@@ -1,9 +1,10 @@
 ```linux
-This script allows to upgrade PNETLab UBUNTU version to 20.04
+This script allows to upgrade dependencies in PNETLab UBUNTU 20.04
 
 File pnetlabv6_offline.zip will be downloaded from unetlab.cloud
 ```
 ## upgrade.sh
+`This script cannot be used in cases where PNETLab UBUNTU version is not 20.04: For those cases, an error message will be displayed and the script execution will be finished`
 
 ### Upgrade
 Apply this command using the terminal
