@@ -5,13 +5,15 @@
 
 # CONSTANTS
 GREEN='\033[32m'
+RED='\033[31m'
 NO_COLOR='\033[0m'
+
 ZIP_FILENAME=pnetlabv6_offline.zip
 URL_ZIP_FILE=https://unetlab.cloud/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/extras/upgrade_to_ubuntu_20.04/pnetlabv6_offline.zip
 
 lsb_release -r -s | grep -q 20.04
 if [ $? -ne 0 ]; then
-    echo "Upgrade has been rejected!"
+    echo -e "${RED}Upgrade has been rejected${NO_COLOR}"
     exit 0
 fi
 
