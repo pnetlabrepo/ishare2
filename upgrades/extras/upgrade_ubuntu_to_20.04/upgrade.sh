@@ -26,6 +26,8 @@ cd /tmp && rm -rf upgrade
 apt-get update > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
 apt-get remove -y docker.io containerd runc &> /dev/null
+apt-get autoremove  &> /dev/null
+apt-get autoclean &> /dev/null
 
 echo -e "${GREEN}Unzipping zip file...${NO_COLOR}"
 unzip $ZIP_FILENAME -d ./upgrade > /dev/null 2>&1
