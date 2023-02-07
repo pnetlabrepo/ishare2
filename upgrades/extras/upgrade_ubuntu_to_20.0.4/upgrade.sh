@@ -28,7 +28,7 @@ echo -e "${GREEN}Zip file has been unzipped successfully...${NO_COLOR}"
 chmod 755 -R upgrade
 find upgrade -type f -print0 | xargs -0 dos2unix > /dev/null 2>&1
 
-echo -e "${GREEN}Upgrading upgrade script...${NO_COLOR}"
+echo -e "${GREEN}Executing upgrade script...${NO_COLOR}"
 ./upgrade/install_pnetlab_v6_offline.sh
 echo -e "${GREEN}Upgrade has been done successfully${NO_COLOR}"
 
