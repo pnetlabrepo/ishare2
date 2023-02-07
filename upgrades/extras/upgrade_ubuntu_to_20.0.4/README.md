@@ -14,5 +14,5 @@ wget -O upgrade.sh https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/up
 When you run this command from above, the steps will be executed as follows:
 
 1) A file called [upgrade.sh](https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/extras/upgrade_ubuntu_to_20.0.4/upgrade.sh) will be downloaded from this repository
-2) Execution permissions will be made to this file
-3) This script will be executed in order to make the upgrade
+2) Execution permissions will be applied to this file
+3) Finally, this script will be executed in order to make the upgrade
