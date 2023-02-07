@@ -4,9 +4,9 @@
 # Requirement: 
 
 # CONSTANTS
-ZIP_FILENAME=pnetlabv6_offline.zip
 GREEN='\033[32m'
 NO_COLOR='\033[0m'
+ZIP_FILENAME=pnetlabv6_offline.zip
 URL_ZIP_FILE=https://unetlab.cloud/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/extras/upgrade_to_ubuntu_20.04/pnetlabv6_offline.zip
 
 lsb_release -r -s | grep -q 20.04
