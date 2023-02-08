@@ -25,7 +25,7 @@ cd /tmp && rm -rf upgrade
 
 apt-get update > /dev/null 2>&1
 apt-get install unzip > /dev/null 2>&1
-apt-get purge -y docker.io containerd runc &> /dev/null
+apt-get purge -y docker.io containerd runc netplan.io &> /dev/null
 apt-get autoremove  &> /dev/null
 apt-get autoclean &> /dev/null
 
