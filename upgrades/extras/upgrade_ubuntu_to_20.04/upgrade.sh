@@ -47,6 +47,8 @@ echo -e "${GREEN}Upgrade has been done successfully${NO_COLOR}"
 rm -rf upgrade
 rm /tmp/$ZIP_FILENAME
 
-echo -e "${GREEN}PNETLab VM will be rebooted right now...${NO_COLOR}"
+echo -e "${GREEN}PNETLab VM will be rebooted in 10 seconds (press CTRL+C to cancel)...${NO_COLOR}"
 echo -e "${GREEN}Try to connect again in about a minute with these credentials: username=root password=pnet${NO_COLOR}"
+sleep 10
+echo -e "${GREEN}Rebooting...${NO_COLOR}"
 reboot
