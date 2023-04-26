@@ -8,7 +8,7 @@
 NEW_PNETLAB_VERSION=5.3.0
 GREEN='\033[32m'
 NO_COLOR='\033[0m'
-URL_ZIP_FILE=https://unetlab.cloud/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/extras/from_any_to_5.3.0/5.3.0.zip
+URL_ZIP_FILE=https://labhub.eu.org/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/extras/from_any_to_5.3.0/5.3.0.zip
 
 # Getting PNETLab version from db
 data=$(mysql -uroot -ppnetlab -D pnetlab_db -e "SELECT control_value FROM control WHERE control_value>1;" 2>/dev/null)

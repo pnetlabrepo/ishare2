@@ -1,8 +1,9 @@
 ```linux
 This script allows to upgrade PNETLab from v5.0.1 to v5.2.7
 
-File 5.2.7.zip will be downloaded from unetlab.cloud
+File 5.2.7.zip will be downloaded from labhub.eu.org
 ```
+
 ## upgrade.sh
 
 `Only applicable for cases where your PNETLab version is 5.0.1. Otherwise, an error message will be displayed and the script execution will be finished`
@@ -10,7 +11,9 @@ File 5.2.7.zip will be downloaded from unetlab.cloud
 `Also, this script detects if you already have PNETLab v5.2.7 in your system and avoids to upgrade twice`
 
 ### Upgrade
+
 Apply this command using the terminal
+
 ```linux
 wget -O upgrade.sh https://raw.githubusercontent.com/pnetlabrepo/ishare2/main/upgrades/from_5.0.1_to_5.2.7/upgrade.sh > /dev/null 2>&1 && chmod +x upgrade.sh && bash upgrade.sh
 ```

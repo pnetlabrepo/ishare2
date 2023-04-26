@@ -7,7 +7,7 @@
 # CONSTANTS
 GREEN='\033[32m'
 NO_COLOR='\033[0m'
-URL_ZIP_FILE=https://unetlab.cloud/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/from_4.2.10_to_5.0.1/5.0.1.zip
+URL_ZIP_FILE=https://labhub.eu.org/api/raw/?path=/UNETLAB%20I/upgrades_pnetlab/from_4.2.10_to_5.0.1/5.0.1.zip
 
 # Getting PNETLab version from db
 data=$(mysql -uroot -ppnetlab -D pnetlab_db -e "SELECT control_value FROM control WHERE control_value>1;" 2>/dev/null)
@@ -25,17 +25,17 @@ if ! [[ $pnetlab_version == "4.2.10" ]]; then
 fi
 
 echo -e "${GREEN}Downloading 5.0.1.zip file...${NO_COLOR}"
-wget -O /tmp/5.0.1.zip $URL_ZIP_FILE > /dev/null 2>&1
+wget -O /tmp/5.0.1.zip $URL_ZIP_FILE >/dev/null 2>&1
 echo -e "${GREEN}Zip file has been downloaded successfully${NO_COLOR}"
 
 cd /tmp && rm -rf upgrade
 
 echo -e "${GREEN}Unzipping zip file...${NO_COLOR}"
-unzip 5.0.1.zip -d ./upgrade > /dev/null 2>&1
+unzip 5.0.1.zip -d ./upgrade >/dev/null 2>&1
 echo -e "${GREEN}Zip file has been unzipped successfully...${NO_COLOR}"
 
 chmod 755 -R upgrade
-find upgrade -type f -print0 | xargs -0 dos2unix > /dev/null 2>&1
+find upgrade -type f -print0 | xargs -0 dos2unix >/dev/null 2>&1
 
 echo -e "${GREEN}Upgrading to v5.0.1...${NO_COLOR}"
 ./upgrade/upgrade
