@@ -1554,7 +1554,7 @@ function ishare2_gui_install() {
     fi
 
     # Make sure venv is installed
-    apt-get install -y python3-venv
+    apt-get install -y python3.8-venv
     if [[ $? -ne 0 ]]; then
         echo "${RED} [-] Error installing venv. ${NO_COLOR}"
         echo "${RED} [-] Please install venv manually and try again. ${NO_COLOR}"
@@ -1563,15 +1563,19 @@ function ishare2_gui_install() {
     fi
 
     # Make venv for ishare2 GUI
-    python3 -m venv $ISHARE2_GUI_DIR/venv
+    python3.8 -m venv $ISHARE2_GUI_DIR/venv
     if [[ $? -ne 0 ]]; then
         echo "${RED} [-] Error creating venv for ishare2 GUI. ${NO_COLOR}"
         echo "${RED} [-] Please read previous logs for troubleshooting. ${NO_COLOR}"
         exit 1
     fi
 
+   
+    #Upgrade PIP
+    $ISHARE2_GUI_DIR/venv/bin/pip install --upgrade pip
+
     # Install requirements
-    $ISHARE2_GUI_DIR/venv/bin/pip install -r $ISHARE2_GUI_DIR/requirements.txt
+    $ISHARE2_GUI_DIR/venv/bin/pip3 install -r $ISHARE2_GUI_DIR/requirements.txt
     if [[ $? -ne 0 ]]; then
         echo "${RED} [-] Error installing ishare2 GUI requirements. ${NO_COLOR}"
         echo "${RED} [-] Please read previous logs for troubleshooting. ${NO_COLOR}"
