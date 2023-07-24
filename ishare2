@@ -7,5 +7,5 @@ echo "This repository is no longer being maintained, use: https://raw.githubuser
 sleep 3
 
 # Download and execute the ishare2 script
-curl -fsSL https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 -o /usr/sbin/ishare2 && chmod +x /usr/sbin/ishare2
+curl -fsSL https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 -o /usr/sbin/ishare2 && chmod +x /usr/sbin/ishare2 && ishare2
 exit 0
