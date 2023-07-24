@@ -12,7 +12,7 @@ echo "This repository is no longer being maintained, use: https://raw.githubuser
 sleep 3
 
 # Download and execute the ishare2 script
-curl -fsSL https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 | bash
+curl -fsSL https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 -o /usr/sbin/ishare2 && chmod +x /usr/sbin/ishare2
 exit 0
 # ishare2 configuration
 CHANNEL="main" # you can change this to available branches in github.com/pnetlabrepo/ishare2
