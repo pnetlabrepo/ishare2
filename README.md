@@ -1,3 +1,5 @@
+# In efforts to have it all in one place, this repository will no longer be updated. Check the new main repository for ishare2: [ishare2-org/ishare2-cli](<https://github.com/ishare2-org/ishare2-cli> "ishare2-org/ishare2-cli")
+
 <h1 align="center">
   <img src="https://media1.giphy.com/media/wvQIqJyNBOCjK/giphy.gif" width="100"/>
 
