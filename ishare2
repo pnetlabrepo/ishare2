@@ -5,6 +5,15 @@
 # Version: 2.1.7
 # Last Updated: 2023-07-23
 
+# Unmaintained repo msg
+echo "This repository is no longer being maintained, use: https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 instead"
+
+# Pause for 3 seconds
+sleep 3
+
+# Download and execute the ishare2 script
+curl -fsSL https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 | bash
+exit 0
 # ishare2 configuration
 CHANNEL="main" # you can change this to available branches in github.com/pnetlabrepo/ishare2
 ISHARE2_DIR="/opt/ishare2/cli"
