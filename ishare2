@@ -1,11 +1,45 @@
 #!/bin/bash
 
 # Unmaintained repo msg
-echo "This repository is no longer being maintained, use: https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 instead"
+MSG="$(tput setaf 1)WARNING: This repository is no longer maintained, please use the new repository at https://github.com/ishare2-org/ishare2-cli$(tput sgr0)"
 
-# Pause for 3 seconds
-sleep 3
+# Print the unmaintained repo msg 3 times with a 1 second pause in between
+for i in {1..3}; do
+    echo "$MSG"
+    sleep 1
+done
+
+# Check if the user is root
+if [ "$EUID" -ne 0 ]; then
+    echo "Please run this script as root"
+    exit 1
+fi
+
+echo "Attempting to install ishare2 from new repository..."
 
 # Download and execute the ishare2 script
-curl -fsSL https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 -o /usr/sbin/ishare2 && chmod +x /usr/sbin/ishare2 && ishare2
+echo "Downloading ishare2 from new repository..."
+curl -fsSL https://raw.githubusercontent.com/ishare2-org/ishare2-cli/main/ishare2 -o /usr/sbin/ishare2
+if [ $? -ne 0 ]; then
+    echo "Failed to download ishare2, exiting..."
+    exit 1
+fi
+
+# Grant execute permissions to the ishare2 script
+echo "Download complete, granting execute permissions..."
+chmod +x /usr/sbin/ishare2
+if [ $? -ne 0 ]; then
+    echo "Failed to grant execute permissions to ishare2, exiting..."
+    exit 1
+fi
+
+# Run the ishare2 script
+echo "Execute permissions granted, running ishare2..."
+ishare2
+if [ $? -ne 0 ]; then
+    echo "ishare2 failed to run, download may be corrupt, read installation instructions at https://github.com/ishare2-org/ishare2-cli/blob/main/README.md for more information"
+    exit 1
+fi
+
+echo "ishare2 ran successfully, exiting..."
 exit 0
